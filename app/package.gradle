@@ -1,12 +1,12 @@
 android {
     flavorDimensions "default"
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.hongenit.gifshowapp"
         minSdkVersion 18
-        targetSdkVersion 28
-        versionCode 1001
-        versionName "1.0.01"
+        targetSdkVersion 30
+        versionCode 1003
+        versionName "1.0.03"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

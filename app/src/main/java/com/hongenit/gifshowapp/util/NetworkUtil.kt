@@ -19,12 +19,13 @@ object NetworkUtil {
     const val UNKNOWN = -1
 
     fun checkNetwork(): Int {
-        val manager = GlobalParam.context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val manager =
+            GlobalParam.context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
         val mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
         return when {
-            wifi.isConnected -> WIFI
-            mobile.isConnected -> MOBILE
+            wifi?.isConnected ?: false -> WIFI
+            mobile?.isConnected ?: false -> MOBILE
             else -> NO_NETWORK
         }
     }

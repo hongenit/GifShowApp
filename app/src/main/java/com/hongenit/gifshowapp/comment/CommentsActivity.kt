@@ -69,7 +69,7 @@ class CommentsActivity : BaseActivity(), LoadDataListener {
 
     override fun setupViews() {
         super.setupViews()
-        mFeedId = intent.getStringExtra(FEED_ID)
+        mFeedId = intent.getStringExtra(FEED_ID) ?: ""
         if (mFeedId.toInt() <= 0) {
             showToast(GlobalUtil.getString(R.string.fetch_feed_details_failed))
             finish()

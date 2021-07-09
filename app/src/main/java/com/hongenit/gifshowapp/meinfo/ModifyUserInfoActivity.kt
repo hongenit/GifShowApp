@@ -283,7 +283,7 @@ class ModifyUserInfoActivity : BaseActivity(), View.OnClickListener {
             }
             CHOOSE_FROM_ALBUM -> if (resultCode == Activity.RESULT_OK) {
                 if (data != null) {
-                    showCroppedPhoto(data.getStringExtra(AlbumActivity.IMAGE_PATH))
+                    showCroppedPhoto(data.getStringExtra(AlbumActivity.IMAGE_PATH)?:"")
                 }
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 showToast(getString(R.string.crop_failed))
