@@ -12,3 +12,5 @@
 /captures
 .externalNativeBuild
 /.idea/
+*.apk
+*output.json
